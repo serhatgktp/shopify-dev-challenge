@@ -7,9 +7,9 @@ public class Photo {
   private String path="";
   private User user;
   
-  public Photo(String imagePath, User username){
+  public Photo(String imagePath, User person){
     path=imagePath;
-    user=username;
+    user=person;
   }
   
   public Photo(String imagePath){
@@ -20,7 +20,7 @@ public class Photo {
     return path;
   }
   
-  public void setUser(User username){
-    user=username;
+  public void setUser(User person){
+    user=person;
   }
 }
