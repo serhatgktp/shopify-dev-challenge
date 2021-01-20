@@ -35,11 +35,7 @@ public class ImagePanel extends JPanel{
  }
   
   public void loadImage(Photo photo) {
-    try {
-      image = ImageIO.read(new File(photo.getPath()));
-    } catch (IOException e) {
-      System.out.println("An image could not be found at path: " + photo.getPath());
-    }
+      image = photo.getImage();
  }
   
   
