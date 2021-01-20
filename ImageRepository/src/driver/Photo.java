@@ -8,6 +8,8 @@ import javax.imageio.ImageIO;
 
 public class Photo {
   
+  public static ArrayList<String> imageNames;
+  
   private String path="";
   private BufferedImage image;
   private User user;
@@ -15,14 +17,37 @@ public class Photo {
   public Photo(String imagePath, User person){
     path=imagePath;
     user=person;
-    image=null;
+    try {
+      File pic = new File(path);
+      if(ImageIO.read(pic)!=null) {
+        image=ImageIO.read(pic);
+      }
+      else {System.out.println("Selected file is not an image.");
+            image=null;
+      }
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
   
   public Photo(String imagePath){
     path=imagePath;
     user=null;
-    image=null;
+    try {
+      File pic = new File(path);
+      if(ImageIO.read(pic)!=null) {
+        image=ImageIO.read(pic);
+      }
+      else {System.out.println("Selected file is not an image.");
+            image=null;
+      }
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
+  
   
   public Photo(){
     user=null;
