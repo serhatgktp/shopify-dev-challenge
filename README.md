@@ -1,6 +1,14 @@
-# shopify-dev-intern-challenge
+# shopify-dev-challenge
 
-Currently work in progress!
+A fun little application that allows you to add and remove (optionally password protected) images from a repository!
 
-I really wanted to submit my application, even though I wasn't able to develop this project yet due to time restraints.
-I hope to be finished very soon!
+Each time an image is uploaded, the user has the option to choose whether or not they would like to assign the image to an account.
+
+A user may also:
+
+- Create an account
+- Change the credentials of an existing account
+- Add images
+- Remove images
+
+This is a shell program, and was done as part of a challenge from Shopify!
